@@ -11,6 +11,8 @@ import (
 
 func main() {
   // len() built in function that gets the length of some input type
+  fmt.Println("Lenth of arguments", len(os.Args))
+
   if len(os.Args) > 1 {
     // os.Args returns an array with the 'program arguments, including the name of the go file being executed followed
     //by any other user input
