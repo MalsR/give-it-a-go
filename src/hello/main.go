@@ -35,3 +35,5 @@ func main() {
 
 //'gofmt main.go' to format go source code
 // run 'gofmt -w main.go' on a file to format the file and write and update source file as opposed to standard output i.r. '-w'
+
+//goimports -w main.go will add missing imports and write to file and run e.g. if "os" package import is missing
