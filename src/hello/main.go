@@ -27,6 +27,51 @@ func main() {
   } else {
     fmt.Println("Planes Rule")
   }
+
+  //standard fo loop with init, condition and post statement, and the statements are optional says go
+  for i := 0; i < 5; i++ {
+    fmt.Println("Print ", i)
+  }
+
+  for 0 < 5 {
+    fmt.Println("It's true")
+    //Else the condition will always be true
+    break
+  }
+
+  var numberToIterate = 0
+  var condition = true
+  for condition {
+    fmt.Println(numberToIterate)
+    numberToIterate++
+    if numberToIterate > 5 {
+      condition = false
+    }
+  }
+
+  for {
+    fmt.Println("For statement without any conditions.. yes")
+    break
+  }
+
+  var stringArray [3]string
+  stringArray[0] = "Index 0"
+  stringArray[1] = "Index 1"
+  stringArray[2] = "Index 2"
+  //stringArray[3] = "Index 2" will result in src/hello/main.go:61: invalid array index 3 (out of bounds for 3-element array)
+  fmt.Println(stringArray)
+
+  //use slices, could say builtin on top of arrays, as it needs to grow new underlying array is created
+  var stringSliceArray []string
+  stringSliceArray = append(stringSliceArray, "Slice 0")
+  stringSliceArray = append(stringSliceArray, "Slice 2")
+  fmt.Println(stringSliceArray)
+
+  //use range to iterate over the array, can also use fmt.Println(len(stringSliceArray)) to get size
+  //the '_' character tells the go compiler that we will not be using a variable anywhere else
+  for _, element := range stringSliceArray {
+    fmt.Println(element)
+  }
 }
 
 //to compile the project do 'go build' on root project, in this case 'hello'. This will create 
