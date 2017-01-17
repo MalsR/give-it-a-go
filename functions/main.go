@@ -4,23 +4,13 @@ import (
 	"fmt"
 	"time"
 )
+
 func main() {
-	//***single multiple, named return and anonymous functions
 	currentTime := currentTime()
 	fmt.Println("Current Time is", currentTime)
-	term, sum := numbersSum(2, 3, 4, 5)
-	fmt.Println(term, sum)
-	anotherTerm, anotherSum := sumWithNamedReturnTypes(2, 3, 4, 5, 6)
-	fmt.Println(anotherTerm, anotherSum)
-	addFunction := func(numbers ...int) (term int, sum int) {
-		for _, number := range numbers {
-			sum += number
-			term += 1
-		}
-		return
-	}
-	numberTerm, numberSum := addFunction(33, 1, 2, 60)
-	fmt.Println("Term is: ", numberTerm, "Sum is:", numberSum)
+
+	//In order to run command line do:  go run functions/main.go functions/function_return_examples.go from checked out dir
+	demonstrateGoFunctions()
 
 	//***Examples of function pass by value and reference
 	var message string = "Hello Core!"
@@ -36,27 +26,9 @@ func main() {
 	//Example of calling method with variadic parameters
 	variadicMethodExample("Boeing 777", "Boing 747", "Airbus A350", "DC1030")
 }
+
 func currentTime() string {
 	return time.Now().String()
-}
-
-func numbersSum(numbers ...int) (int, int) {
-	result := 0
-	term := 0
-	for _, number := range numbers {
-		term += 1
-		result += number
-	}
-	return term, result
-}
-
-func sumWithNamedReturnTypes(numbers ...int) (term int, result int) {
-	//name the return types in method definition and just return
-	for _, number := range numbers {
-		result += number
-		term += 1
-	}
-	return
 }
 
 func printMessage(message string) {
