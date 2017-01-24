@@ -23,8 +23,7 @@ func main() {
     emiratesA380 := Aircraft { make: "Airbus", model: "A380", age: 3.5, airline: "EK", engines: 4, maxPax: 500}
     emiratesA380.isHeavy()
     baA320 := Aircraft { make: "Airbus", model: "A320", age: 10.5, airline: "BA", engines: 2, maxPax: 500}
-    baA320.isHeavy()
-        
+    baA320.isHeavy()        
 }
 
 /*We achieve encapsulation in terms of behaviour with structs by telling a method the type it can
