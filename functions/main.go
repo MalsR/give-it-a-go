@@ -46,7 +46,7 @@ func updateMessage(message *string) {
 	//remember just 'message' would print the memory address of where the variable is stored, updateMessage(&message)
 	//&message sends the memory location. In order to print the value use *message that tells to get the value
 	//referenced by the memory location, dereference the pointer
-	fmt.Println("Prints memory localtion of message variable=",message)
+	fmt.Println("Prints memory localtion of message variable=", message)
 	fmt.Println("Print value of mesage=", *message)
 }
 
@@ -59,11 +59,10 @@ func attemptToUpdateMessage(message string) {
 Example of a variadic parameter in go. The '...' signals the creation of a variadic parameter in go.
 Apparently must always be last in the declaration of parameters.
 When calling method with variadic params go sends the values of the string as a slice.
- */
+*/
 func variadicMethodExample(messages ...string) {
 	//Treat as any other slice in go https://blog.golang.org/go-slices-usage-and-internals
 	for _, message := range messages {
 		fmt.Println(message)
 	}
 }
-

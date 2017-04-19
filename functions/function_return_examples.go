@@ -1,21 +1,22 @@
 package main
+
 //package name need to 'main' if main.go calls any functions in this file
 
 import (
-    "fmt"
+	"fmt"
 )
 
 /**
-Simple method that demonstrates go functions with single and multiple return types, functions with named return types and 
+Simple method that demonstrates go functions with single and multiple return types, functions with named return types and
 annonymous functions
 **/
-func demonstrateGoFunctions() {	
+func demonstrateGoFunctions() {
 	term, sum := numbersSum(2, 3, 4, 5)
 	fmt.Println(term, sum)
 
 	anotherTerm, anotherSum := sumWithNamedReturnTypes(2, 3, 4, 5, 6)
 	fmt.Println(anotherTerm, anotherSum)
-    
+
 	addFunction := func(numbers ...int) (term int, sum int) {
 		for _, number := range numbers {
 			sum += number
@@ -45,4 +46,3 @@ func sumWithNamedReturnTypes(numbers ...int) (term int, result int) {
 	}
 	return
 }
-
