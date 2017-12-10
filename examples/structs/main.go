@@ -4,10 +4,9 @@ import (
 	"fmt"
 )
 
-/* Guess you could say a struct is a container of some arbitory types or
- * a way of commonly grouping a bunch of types. We can use structs in go
- * for encapsulation
- */
+// Aircraft a type that defines the building blocks of an aircraft.
+// Guess you could say a struct is a container of some arbitrary types or a way of commonly grouping a bunch of types.
+// We can use structs in go for encapsulation
 type Aircraft struct {
 	make    string
 	model   string

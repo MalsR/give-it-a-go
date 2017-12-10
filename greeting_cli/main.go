@@ -42,9 +42,8 @@ func printHourOfDay(hourOfDay int) (string, error) {
 		return "It's that time of the evening", nil
 	} else if hourOfDay > 19 && hourOfDay < 1 {
 		return "Time to hit the bed", nil
-	} else {
-		return message, errors.New("BAM")
 	}
+	return message, errors.New("BAM")
 }
 
 func exampleMethodReturningMultipleValues() (string, string, error) {

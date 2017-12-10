@@ -10,7 +10,7 @@ func main() {
 	fmt.Println("Current Time is", currentTime)
 
 	//In order to run command line do:  go run functions/main.go functions/function_return_examples.go from checked out dir
-	demonstrateGoFunctions()
+	//demonstrateGoFunctions()
 
 	//***Examples of function pass by value and reference
 	var message string = "Hello Core!"
@@ -37,6 +37,7 @@ func printMessage(message string) {
 
 //Pass by reference, where we send a reference that points to the memory location of where the variable is stored
 func updateMessage(message *string) {
+	fmt.Printf("printing memory address if possible %v \n\r", message)
 	//*string basically tells the method to expect a memory location that points to a string variable, i.e. pointer
 
 	//*message is required and not message, because we are telling the compiler to assign what is right to the
