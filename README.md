@@ -3,3 +3,9 @@
 
 # give-it-a-go
 Giving Go a Go, learning go with examples
+
+## Resources
+- Setting up your GOPATH https://golang.org/doc/code.html#Workspaces
+
+## Libraries/Links
+- https://github.com/pathbox/learning-go
